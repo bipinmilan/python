@@ -7,3 +7,16 @@
 # A lambda function can take any number of arguments, but can only have one expression.
 # Very similar to JS arrow functions
 
+def func1():
+    a = 20
+
+    def func2():
+        nonlocal a #we are modifying value of a so use nonlocal
+        a = a + 1
+    func2()
+    return a
+
+
+print(func1())
+
+
